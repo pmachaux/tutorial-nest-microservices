@@ -1,5 +1,5 @@
 {
-  "name": "microservice-app",
+  "name": "microservice-client",
   "version": "0.0.0",
   "description": "description",
   "author": "",
@@ -23,6 +23,7 @@
     "@nestjs/common": "^6.11.5",
     "@nestjs/core": "^6.11.5",
     "@nestjs/microservices": "^6.11.5",
+    "@nestjs/platform-express": "^6.11.5",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",

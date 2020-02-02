@@ -1,12 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
-
+import { MessagePattern } from '@nestjs/microservices';
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  constructor() {}
+  @MessagePattern({ cmd: 'hello' })
+  async handleMessagePrinted(data: Record<string, unknown>) {
+    return 'Hello from TCP Microservice';
   }
 }
